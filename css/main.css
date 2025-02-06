@@ -1,0 +1,139 @@
+/*// Reset default padding and margin
+* {
+    padding: 0;
+    margin: 0;
+}
+
+// Body styling to limit the width to 100% of the viewport
+body {
+    max-width: 100vw;
+}
+
+// Header styling: use flexbox to space out elements
+header {
+    display: flex;
+    width: 100%;
+    background: #333;
+    justify-content: space-between;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;  // Ensure navbar takes full width
+}
+
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 20px; // Spaces out menu items
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+}
+
+.auth {
+    display: flex;
+    gap: 15px; // Spaces out login/signup links
+}
+
+.auth a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+
+// Style for unordered lists, making them horizontal
+ul {
+    display: flex;
+    list-style: none;
+} */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #000000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #333;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 35px;
+  height: 34px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu a, .auth a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+}
+
+.auth a {
+  padding: 5px 10px;
+}
+
+.signup-btn {
+  border: 1px solid #0093e9;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 66px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.gradient-text {
+  background: linear-gradient(90.95deg, #0093e9 0%, #80d0c7 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}/*# sourceMappingURL=main.css.map */
