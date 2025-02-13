@@ -1,87 +1,73 @@
-/*// Reset default padding and margin
-* {
-    padding: 0;
-    margin: 0;
-}
 
-// Body styling to limit the width to 100% of the viewport
-body {
-    max-width: 100vw;
-}
-
-// Header styling: use flexbox to space out elements
-header {
-    display: flex;
-    width: 100%;
-    background: #333;
-    justify-content: space-between;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;  // Ensure navbar takes full width
-}
-
-
-.logo {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.menu {
-    display: flex;
-    list-style: none;
-    gap: 20px; // Spaces out menu items
-}
-
-.menu li a {
-    text-decoration: none;
-    color: white;
-}
-
-.auth {
-    display: flex;
-    gap: 15px; // Spaces out login/signup links
-}
-
-.auth a {
-    text-decoration: none;
-    color: white;
-}
-
-
-
-
-
-// Style for unordered lists, making them horizontal
-ul {
-    display: flex;
-    list-style: none;
-} */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+   
+    
+    
+    
+}
+
+html {
+    overflow-x: hidden;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #000000;
-    overflow: auto;  /* Ensures scrolling */
-    height: auto;  /* Allows content to expand naturally */
+    max-width: 100vw;
+    overflow-x: hidden;
+    
 }
+    
+
+    .elements {
+        
+        position: absolute;  /* Ensures it doesn't depend on parent size */
+        
+        
+        z-index: -100; /* Keeps it in the background */
+        
+        
+        .ellipse1,
+        .ellipse2 {
+          
+          width: 33rem;
+          height: 33rem;
+          border-radius: 50%;
+          filter: blur(18.75rem);
+
+          
+        }
+      
+        .ellipse1 {
+          background: #80d0c7;
+         transform :translate(70vw,5rem) ;
+    
+    
+        }
+      
+        .ellipse2 {
+          background: #0093e9;
+          bottom: -10%; // Moves it further below
+          left: -10%;
+        }
+      }
+      
+      
+
 
 .navbar {
     display: flex;
+    position: relative;
+    height: 6.5rem;
     justify-content: space-between;
     align-items: center;
     padding: 0.625rem 1.25rem; /* 10px 20px */
-    background: #333;
+    
     color: white;
+    
 }
 
 .logo {
@@ -223,7 +209,6 @@ body {
   .image1 {
     border-radius: 0.75rem; // 12px
     height: 42.875rem; // 686px
-    position: relative;
     box-shadow: 0 0 6.25rem 1.875rem rgba(0, 0, 0, 0.15); // 100px 30px
     object-fit: cover;
     display: block;
@@ -232,7 +217,7 @@ body {
   }
 
   .image2 {
-    box-sizing: border-box;
+    
     height: auto;
     position: relative;
     overflow: visible;
@@ -359,7 +344,7 @@ body {
     align-items: center; // Centers the feature blocks
 }
 
-.feature-block {
+.feature-block{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -367,11 +352,22 @@ body {
     width: 80%;
     max-width: 80rem; // 1280px for layout control
     flex-wrap: nowrap; // ✅ Prevents content from wrapping
+    flex-direction: row;
 }
 
 // For blocks where the image should be on the left
-.feature-block.reverse {
-    flex-direction: row-reverse !important;
+.feature-block-reverse {
+    -webkit-flex-direction: row-reverse;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem; // Space between text and image
+    width: 80%;
+    max-width: 80rem; // 1280px for layout control
+    flex-wrap: nowrap; // ✅ Prevents content from wrapping
+   
+    
+    
 }
 
 .content-box {
@@ -409,12 +405,14 @@ body {
     max-width: 34.5rem; // ✅ Adjusted width for image
     flex: 1;
     height: 25rem; // Adjust as needed
+    overflow: hidden;
 
     img {
         max-width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 0.75rem;
+        display: block;
     }
 }
 
@@ -436,6 +434,7 @@ body {
     gap: 2rem; // Space between tiles
     margin-top: 3rem;
     margin-bottom: 5rem;
+    
 }
 
 .tile {
@@ -453,6 +452,7 @@ body {
     position: relative;
     width: 100%;
     height: 11.75rem; // 188px
+    overflow: hidden;
 
     img {
         width: 100%;
@@ -644,9 +644,7 @@ body {
         }
     }
     
-}
-
-
+} 
 
 
   
